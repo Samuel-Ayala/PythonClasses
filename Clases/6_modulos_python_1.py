@@ -43,7 +43,6 @@ print(time1,time2)
 
 
 #~Matplotlib
-
 x = numpy.array([1,2,3,4,5])
 y = numpy.array([10,20,50,10,35])
 plt.plot(x,y,label='Grafico continuo')
