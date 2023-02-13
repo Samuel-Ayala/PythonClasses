@@ -3,7 +3,7 @@ a = 4
 print(type(a))
 
 #Flotantes
-b = 5.5
+b = 5.512
 print(type(b))
 
 #Booleanos

@@ -12,8 +12,8 @@
 
 
 #----Ejercicio 3----#
-#Crear un arreglo con 20 numeros aleatorios entre 1 y 90. Luego, imprimir todos aquellos numeros impares
-#que son mayores a 5
+#Crear un arreglo con 20 numeros aleatorios entre 1 y 90. Luego, imprimir todos aquellos numeros 
+#impares que son mayores a 5
 
 
 

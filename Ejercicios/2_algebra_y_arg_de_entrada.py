@@ -5,9 +5,9 @@
 
 
 
-#----Ejercicio 2----#
-#Escribir un programa que lea un entero positivo "n" introducido por el usuario y después muestre en
-#pantalla la suma de todos los enteros desde 1 hasta "n"
+# ----Ejercicio 2----#
+# Escribir un programa que lea un entero positivo "n" introducido por el usuario y después muestre en
+# pantalla la suma de todos los enteros desde 1 hasta "n"
 
 
 
