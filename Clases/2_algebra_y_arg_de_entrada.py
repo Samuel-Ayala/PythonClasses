@@ -1,16 +1,16 @@
 import sys
 
-arg1 = sys.argv[1]
+arg1 = sys.argv[0]
 arg2 = sys.argv[2]
 
-print(arg1)
-print(type(arg2))
+# print(arg1)
+# print(type(int(arg2)))
 
 ##################
 
 #Operaciones algebraicas
 
-a = 13
+a = 12
 b = 6
 
 c0 = a + b
