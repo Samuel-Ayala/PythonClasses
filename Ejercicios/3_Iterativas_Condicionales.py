@@ -11,25 +11,36 @@ import sys
 #usuario puede contener solo letras y números".
 #-Nombre de usuario válido, retorna True.
 
-nombre = sys.argv[1]
+# nombre = sys.argv[1]
 
-if (len(nombre)>=6 and len(nombre)<=12):
-    if (nombre.isalnum() == True):
-        print(True)
-    else:
-        print("El nombre de usuario puede contener solo letras y números")
-else:
-    print("El nombre de usuario debe contener entre 6 a 12 caracteres")
-
-
-
-
-
-
-
-
+# if (len(nombre)>=6 and len(nombre)<=12):
+#     if (nombre.isalnum() == True):
+#         print(True)
+#     else:
+#         print("El nombre de usuario puede contener solo letras y números")
+# else:
+#     print("El nombre de usuario debe contener entre 6 a 12 caracteres")
 
 
 #----Ejercicio 2----#
-#Crear un programa que de como resultado el termino "n" de la sucesion de Fibonacci. El "n" es numero
-#ingresado como argumento de entrada
+# Escribir un programa que almacene la cadena de caracteres de una contraseña en una variable, 
+# pregunte al usuario por la contraseña hasta que introduzca la contraseña correcta.
+
+# contra = "qwerty"
+# while True:
+#     contra_ingresada = input("Escriba la contraseña: ")
+#     if (contra_ingresada == contra):
+#         print("La contraseña ingresada es la correcta")
+#         break
+        
+
+
+#----Ejercicio 3----#
+# Escribir un programa que capture una palabra ingresada como argumento de entrada
+# y luego muestre por pantalla una a una las letras de la palabra introducida empezando por la última.
+
+palabra = sys.argv[1]
+
+for i in range(1,len(palabra)+1):
+    letra = palabra[-i]
+    print(letra)
