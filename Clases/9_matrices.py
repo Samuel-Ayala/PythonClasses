@@ -36,7 +36,7 @@ for i in range(len(mat_a)):
     for j in range(len(mat_b[0])):
         for k in range(len(mat_a[0])):
             mat_mul_for[i][j] += mat_a[i][k] * mat_b[k][j]
-print("Multiplicacion con funcion dot: \n",mat_mul)
-print("Multiplicacion empleando bucles for: \n", mat_mul_for)
+# print("Multiplicacion con funcion dot: \n",mat_mul)
+# print("Multiplicacion empleando bucles for: \n", mat_mul_for)
 
         

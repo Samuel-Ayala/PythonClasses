@@ -17,3 +17,83 @@
 # 
 #Ejm: Si la VM tiene disco SSD Premium, tiene politica de Backup y esta replicada en 3 regiones
 #entonces su disponibilidad sera de 99 + 0.9 + 0.09 = 99.99%
+
+#Cliente
+import socket
+import pickle
+
+SOCK_BUFFER = 1024
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_address = ("192.168.1.37", 5005)
+
+print(f"Conectando a servidor -> {server_address[0]}, puerto -> {server_address[1]}")
+sock.connect(server_address)
+
+datos = [2,"SSD estandar","SI","NO"]
+datos_empaquetados = pickle.dumps(datos)
+
+try:
+    sock.sendall(datos_empaquetados)
+    data = sock.recv(SOCK_BUFFER)
+except Exception as e:
+    print(f"Excepcion: {e}")
+finally:
+    print("Cierre de conexion")
+    sock.close()
+
+res = data.decode()
+print(res)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Cliente
+# import socket
+# import pickle
+
+# SOCK_BUFFER = 1024
+# sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server_address = ("192.168.1.37", 5005)
+
+# print(f"Conectando a servidor -> {server_address[0]}, puerto -> {server_address[1]}")
+# sock.connect(server_address)
+
+# datos = [2,"SSD estandar","SI","NO"]
+# datos_empaquetados = pickle.dumps(datos)
+
+# try:
+#     sock.sendall(datos_empaquetados)
+#     data = sock.recv(SOCK_BUFFER)
+# except Exception as e:
+#     print(f"Excepcion: {e}")
+# finally:
+#     print("Cierro conexion")
+#     sock.close()
+    
+# res = data.decode('utf-8')
+# print(res)
+

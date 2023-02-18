@@ -1,4 +1,5 @@
 import sys
+import numpy as np
 
 #----Ejercicio 1----#
 #Escribir una función que reciba una muestra de números en una lista y devuelva su media.
@@ -49,39 +50,53 @@ def numeros(lista):
 
     #Mediana
     if (len(lista)%2 == 0):
-        lista_ordenada = lista.sort()
+        lista_ordenada = np.sort(lista)
         indice1 = int(len(lista_ordenada)/2)
         indice2 = int(len(lista_ordenada)/2) - 1
         mediana = (lista_ordenada[indice1] + lista_ordenada[indice2])/2
     else:
-        lista_ordenada = lista.sort()
+        lista_ordenada = np.sort(lista)
         indice = int(len(lista_ordenada)/2)
         mediana = lista_ordenada[indice]
     dicc["Mediana"] = mediana
 
     #Moda
-
-
-
-
-
+    dic_moda = {}
+    for i in lista:
+        key = str(i)
+        if key in dic_moda.keys():
+            dic_moda[key] += 1
+        else:
+            dic_moda[key] = 1
     
-
+    len_moda = 0
+    moda = 0
+    for key in dic_moda.keys():
+        if (dic_moda[key] > len_moda):
+            len_moda = dic_moda[key]
+            moda = int(key)
+    dicc["Moda"] = moda
+    return dicc
 
 
 
 
 
 if __name__ == "__main__":
-    arr = [1,2,3,4,3]
+    arr = np.array([1,2,3,4,3])
     #med = media(arr)
     #rint(med)
 
     #palabra = sys.argv[1]
     #espalindromo(palabra)
 
-    lista_cuadrados = cuadrados(arr)
-    print(lista_cuadrados)
+    #lista_cuadrados = cuadrados(arr)
+    #print(lista_cuadrados)
+
+    diccionario = numeros(arr)
+    print(diccionario)
+
+
 
 
 
