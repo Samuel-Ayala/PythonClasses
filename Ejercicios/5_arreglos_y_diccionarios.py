@@ -118,29 +118,3 @@ if __name__ == "__main__":
 
 
 
-
-
-
-
-
-
-# array = [1,3,4,2,4,2,4,3,6]
-# dic_moda = {}
-# for i in array:
-#     key = str(i)
-#     if key in dic_moda.keys():
-#         dic_moda[key] += 1
-#     else:
-#         dic_moda[key] = 1
-
-# len_moda = 0
-# moda = 0
-# for i in dic_moda.keys():
-#     if dic_moda[i] > len_moda:
-#         len_moda = dic_moda[i]
-#         moda = int(i)
-
-        
-# print(moda)
-# print(dic_moda)
-# print(dic_moda.keys())
